@@ -1,5 +1,10 @@
 var data;
 
+window.onload = () => {
+    document.getElementById('rand-btn').onclick = () => createRandomString(25);
+    document.getElementById('json-btn').onclick = () => readTextFile();
+};
+
 function createRandomString(length) {
     if (isNaN(length)) {
         length = 15;
