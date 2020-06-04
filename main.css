@@ -1,3 +1,7 @@
-body {
-    color: deepskyblue;
+.num-btn {
+    display: inline-block;
+    text-decoration: underline;
+    color: blue;
+    padding: 10px;
+    cursor: pointer;
 }
