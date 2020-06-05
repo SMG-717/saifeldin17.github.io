@@ -8,7 +8,7 @@ function readTextFile() {
         // noinspection EqualityComparisonWithCoercionJS
         if (rawFile.readyState === 4 && rawFile.status == "200") {
             listings = JSON.parse(rawFile.responseText);
-            console.log(listings.length + ' properties loaded from json');
+            document.getElementById('display').innerHTML = listings.length + ' properties loaded from json';
         }
     };
     rawFile.send(null);
