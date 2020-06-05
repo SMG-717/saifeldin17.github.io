@@ -1,13 +1,10 @@
-var data;
-
 window.onload = () => {
-    document.getElementById('rand-btn').onclick = () => createRandomString(25);
-    document.getElementById('json-btn').onclick = () => readTextFile();
+    document.getElementById('rand-btn').onclick = createRandomString;
 };
 
 function createRandomString(length) {
     if (isNaN(length)) {
-        length = 15;
+        length = 25;
     }
 
     let text = '';
@@ -17,19 +14,5 @@ function createRandomString(length) {
         text += characters.charAt(index);
     }
     console.log(text);
-}
-
-function readTextFile() {
-    file = "data.json"
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function() {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            data = JSON.parse(rawFile.responseText);
-            console.log(data);
-        }
-    };
-    rawFile.send(null);
 }
 
