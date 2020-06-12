@@ -7,7 +7,13 @@
 </head>
 <body>
     <h1>Airbnb home page</h1>
-    <button id="json-btn" onclick="console.log(listings.length)">JSON Test</button>
-    <p id="display"></p>
+    <div>
+        <span>Minimum: <input id="min" type="number" min="0" max="1000" value="100"></span>
+        <span>Maximum: <input id="max" type="number" min="0" max="1000" value="200"></span>
+    </div>
+    <div>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div id="prop-list"></div>
 </body>
 </html>
